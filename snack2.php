@@ -5,17 +5,25 @@ negato” -->
 
 <?php
 
-$name = $_GET['name'];
-$mail = $_GET['mail'];
-$age = $_GET['age'];
-
 // echo "I'm working";
 
-if ( (strlen($name) > 3) && (strpos($mail, '@')) && (strpos($mail, '.', -4)) && (!(is_nan($age))) ) 
+if ( isset($_GET['name']) && isset($_GET['mail']) && isset($_GET['age']) )
 {
-    echo "Accesso riuscito";
+    $name = $_GET['name'];
+    $mail = $_GET['mail'];
+    $age = $_GET['age'];
+
+    if ( (strlen($name) > 3) && (strpos($mail, '@')) && (strpos($mail, '.', -4)) && (!(is_nan($age))) ) 
+    {
+        // echo "Accesso riuscito";
+        echo '<h1>Accesso riuscito!</h1>';
+    }
+    else 
+    {
+        echo '<h1>Accesso negato!</h1>';
+    }
 }
 else 
 {
-    echo "Accesso negato";
+    echo '<h1>Accesso negato!</h1>';
 }

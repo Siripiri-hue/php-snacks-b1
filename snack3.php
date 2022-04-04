@@ -43,9 +43,11 @@ $posts = [
     ],
 ];
 
-foreach ($posts as $post) 
+foreach ($posts as $post => $value) 
 {
-    foreach ($post as $msg)
+    echo '<h1>' . $post . '</h1><br>';
+
+    foreach ($value as $msg)
     {
         echo $msg['title'];
         echo '<br>';
