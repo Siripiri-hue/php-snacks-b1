@@ -56,5 +56,3 @@ foreach ($posts as $post)
         echo '<hr>';
     }
 }
-
-?>
