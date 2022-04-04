@@ -5,12 +5,27 @@ numero più di una volta -->
 
 $random_numbers = [];
 
-for ($i = 0; $i < 15; $i++)
+// for ($i = 0; $i < 15; $i++)
+// {
+//     $random = rand(1, 100);
+//     echo $random;
+//     echo '<br>';
+//     array_push($random_numbers, $random);
+// }
+
+// echo '<hr>';
+// var_dump($random_numbers);
+
+while ( count($random_numbers) < 15 )
 {
     $random = rand(1, 100);
     echo $random;
     echo '<br>';
-    array_push($random_numbers, $random);
+
+    if ( !(in_array($random, $random_numbers)) )
+    {
+        array_push($random_numbers, $random);
+    }  
 }
 
 echo '<hr>';
